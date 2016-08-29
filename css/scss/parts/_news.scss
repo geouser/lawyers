@@ -1,0 +1,38 @@
+.news {
+    margin: 0px 0 210px;
+    &__list {
+        @include flex($wrap: wrap, $justify: flex-start);
+        text-align: left;
+        margin-top: 65px;
+        &__item {
+            width: 310px;
+            margin: 0 0 86px;
+            &:nth-of-type(3n + 2) {
+                margin: 0 98px 86px;
+            }
+            &__img {
+                &:after {
+                    width: 100%;
+                    content: "";
+                    display: block;
+                    background-color: $gold;
+                    height: 8px;
+                    margin: 30px auto;
+                }
+                img {
+                    
+                }
+            }
+            &__info {
+                h3 {
+                    color: $grey;
+                    font-size: 22px;
+                    margin-bottom: 15px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

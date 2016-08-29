@@ -1,0 +1,57 @@
+.services {
+    margin-bottom: 210px;
+    &__list {
+        margin-top: 50px;
+        list-style-type: none;
+        text-align: left;
+        -moz-column-count: 2;
+        -moz-column-gap: 120px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 120px;
+        column-count: 2;
+        column-gap: 120px;
+        li {
+            margin-bottom: 70px;
+            &:before {
+                content: "";
+                display: inline-block; vertical-align: middle;
+                margin-right: 16px;
+                background-position: -5px -160px; width: 62px; height: 59px;
+                background-image: url("../images/services/services_sprite.png");
+            }
+            &:nth-of-type(2) {
+                &:before { 
+                    background-position: -5px -45px; width: 65px; height: 54px;
+                }
+            }
+            &:nth-of-type(3) {
+                &:before { 
+                    background-position: -5px -286px; width: 58px; height: 51px;
+                }
+            }
+            &:nth-of-type(4) {
+                &:before { 
+                   background-position: -5px -0px; width: 67px; height: 40px;
+                }
+            }
+            &:nth-of-type(5) {
+                &:before { 
+                    background-position: -5px -342px; width: 56px; height: 42px;
+                }
+            }
+            &:nth-of-type(6) {
+                &:before { 
+                    background-position: -5px -104px; width: 63px; height: 51px;
+                }
+            }
+            &:nth-of-type(7) {
+                &:before { 
+                    background-position: -5px -224px; width: 61px; height: 57px; 
+                }
+            }
+        }
+    }
+    .button {
+        margin-top: 90px;
+    }
+}

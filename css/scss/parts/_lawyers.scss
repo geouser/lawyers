@@ -1,0 +1,21 @@
+.lawyers {
+    @include flex($wrap: wrap, $justify: flex-start);
+    margin: 70px 0 200px;
+    text-align: left;
+    &__lawyer {
+        width: 310px;
+        margin: 0 0 86px;
+        &:nth-of-type(3n + 2) {
+            margin: 0 98px 86px;
+        }
+        h3 {
+            color: $grey;
+        }
+        &__img {
+            width: 100%;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
