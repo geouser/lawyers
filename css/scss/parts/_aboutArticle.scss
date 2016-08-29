@@ -1,0 +1,33 @@
+.aboutArtcile {
+    &__img {
+        width: 50%;
+        float: left;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__info {
+        width: 50%;
+        float: right;
+        padding: 80px 0 0 60px;
+        text-align: left;
+    }
+    &--textLeft {
+        .aboutArtcile__img {
+            float: right;
+        }
+        .aboutArtcile__info {
+            padding: 80px 60px 0 0px;
+            float: left;
+        }
+    }
+    &:after {
+        display: block;
+        content: "";
+        width: 4px;
+        height: 50px;
+        background-color: $gold;
+        margin: 65px auto;
+        clear: both;
+    }
+}

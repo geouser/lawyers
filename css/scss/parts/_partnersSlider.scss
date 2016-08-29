@@ -1,0 +1,35 @@
+.partners {
+    &__slider {
+            margin-top: 50px;
+        &__slide {
+            max-width: 150px;
+            margin: 0 18px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .slick-arrow {
+        border-bottom: 4px solid $gold;
+        border-left: 4px solid $gold;
+        border-top: 4px solid transparent;
+        border-right: 4px solid transparent;
+        z-index: 10;
+        &.slick-prev {
+            left: -75px;
+            -webkit-transform: rotate(45deg);
+               -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                 -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+        }
+        &.slick-next {
+            right: -75px;
+            -webkit-transform: rotate(-135deg);
+               -moz-transform: rotate(-135deg);
+                -ms-transform: rotate(-135deg);
+                 -o-transform: rotate(-135deg);
+                    transform: rotate(-135deg);
+        }
+    }
+}

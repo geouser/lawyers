@@ -59,6 +59,31 @@ jQuery(document).ready(function($) {
         mainClass: 'my-mfp-slide-bottom'
     });
 
+    $('.partners__slider').slick({
+        dots: false,
+        arrows: true,
+        lazyLoad: 'ondemand',
+        slidesToShow: 6,
+        slidesToScroll: 1,
+
+        responsive: [
+          {
+            breakpoint: 900,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+
 
 
     /*----------------------------
