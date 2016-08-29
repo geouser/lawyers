@@ -2,8 +2,8 @@
     &__slider {
             margin-top: 50px;
         &__slide {
-            max-width: 150px;
-            margin: 0 18px;
+            display: inline-block;
+            text-align: center;
             img {
                 max-width: 100%;
             }

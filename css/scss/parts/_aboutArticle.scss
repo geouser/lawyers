@@ -9,17 +9,37 @@
     &__info {
         width: 50%;
         float: right;
-        padding: 80px 0 0 60px;
+        padding: 80px 0 0 80px;
         text-align: left;
+        &:before {
+            content: "";
+            display: block;
+            margin-left: -20px;
+            height: 8px;
+            width: 95px;
+            margin-bottom: 30px;
+            background-color: $gold;
+        }
+        color: #706f6f;
+        h3 {
+            margin-bottom: 35px;   
+        }
+        p {
+            line-height: 26px;
+        }
     }
     &--textLeft {
         .aboutArtcile__img {
             float: right;
         }
         .aboutArtcile__info {
-            padding: 80px 60px 0 0px;
+            padding: 80px 80px 0 0px;
             float: left;
         }
+    }
+    hr {
+       clear: both;
+        border: none;
     }
     &:after {
         display: block;
@@ -29,5 +49,10 @@
         background-color: $gold;
         margin: 65px auto;
         clear: both;
+    }
+    &:last-of-type {
+        &:after {
+            display: none;
+        }
     }
 }

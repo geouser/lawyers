@@ -24,6 +24,7 @@ $r:         'Roboto';
 html, body {
     height: 100%;
     font-family: $s;
+    font-size: 18px;
 }
 
 
@@ -33,7 +34,9 @@ h1 {
     color: #FFF;
     text-transform: uppercase;
     max-width: 650px;
-     &:after {
+}
+.afterLine {
+    &:after {
         display: block;
         content: "";
         margin: 50px auto 0;
@@ -54,6 +57,7 @@ h2 {
 }
 h3 {
     font-size: 37px;
+    color: $grey;
 }
 .white                          {	color: #FFF;}
 
