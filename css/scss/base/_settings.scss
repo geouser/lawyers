@@ -19,8 +19,16 @@ $grey : #b6b6b6;
 html, body                    	{   height: 100%;}
 p                             	{   }
 h1, h2, h3, h4, h5, p         	{   }
+h2 {
+    &:after {
+        display: block;
+        content: "";
+        margin: 50px auto 0;
+        width: 4px; height: 50px;
+        background-color: $gold;
+    }
+}
 .white                          {	color: #FFF;}
-
 
 
 
@@ -33,5 +41,11 @@ h1, h2, h3, h4, h5, p         	{   }
                               	}
 header 							{}
 aside 							{}
-main 							{}
+main 							{ 
+                                    margin-top: -60px;
+                                    background-color: #FFF;
+                                    position: relative;
+                                    z-index: 2;
+                                    padding: 64px;
+                                }
 footer 							{}

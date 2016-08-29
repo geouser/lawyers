@@ -62,8 +62,28 @@ body {
                 text-decoration: none;
                 text-transform: uppercase;
                 color: $main;
-                @include transition(all, .2s);             
-                &:hover {}
+                @include transition(all, .2s);    
+                position: relative;
+                padding: 10px 0;
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 16px;
+                    height: 4px;
+                    background-color: $gold;
+                    opacity: 0;
+                    @include transition(all, .2s); 
+                }         
+                &:hover,
+                &.active {
+                    color: $gold;
+                    &:before {
+                        opacity: 1;
+                    }
+                }
             }
         }
 
