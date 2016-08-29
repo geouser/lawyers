@@ -1,8 +1,8 @@
 // COLORS
 // ---------------------------
-$main : '444444';
-$gold : 'd7ab69';
-$grey : 'b6b6b6';
+$main : #444444;
+$gold : #d7ab69;
+$grey : #b6b6b6;
 
 // FONTS
 // ---------------------------
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, p         	{   }
 // lAYOUT
 // ---------------------------
 
-.wrapper                      	{   width: 1200px;
+.wrapper                      	{   width: 1260px;
 								   	margin: 0 auto;
                                    	text-align: center;
                               	}

@@ -1,11 +1,20 @@
-         
-header {
+body {
+    padding-top: 70px;
+}         
+.mainHeader {
     @include position(absolute, 0, auto, auto, 0);
     width: 100%;
     z-index: 100;
     background: #fff;
     margin: 0;
+    height: 70px;
     @include transition(all, .4s);
+    
+    .wrapper {
+        height: 100%;
+        position: relative;
+        @include flex();
+    }
     
         /*.................media.............*/
         @include m800 {
@@ -25,45 +34,38 @@ header {
             }
         }
         /*.............end media..............*/
-
-
-    .header__top {
-        padding: 7px 0;
-        color: #FFF;
-        .wrapper {
-            @include flex();
+        
+        .mainHeader__info,
+        .mainNav {
+            width: 50%;
         }
-        .divide {
-            height: 35px;
-            width: 1px;
-            vertical-align: middle;
-            background-color: #1E5D75;
+        .logo {
+            position: absolute;
+            left: 0; right: 0;
+            top: 10px;
+            margin: auto;
         }
-    }
-    
-    .header__bottom {
-        padding: 30px 0;
-        background-color: #fff;
-        .wrapper {
-            @include flex();
-        }
-    }
 }
 
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
-
-nav ul {
-    @include flex();
-    list-style-type: none;
-    a {
-        display: inline-block;
-        margin: 0 20px;
-        text-decoration: none;
-        @include transition(all, .2s);             
-        &:hover {}
-    }
+.mainNav {
+    ul {
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            a {
+                display: inline-block;
+                margin: 0 25px 0 0;
+                font-size: 15px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $main;
+                @include transition(all, .2s);             
+                &:hover {}
+            }
+        }
 
         /*.................media.............*/
         @include m800 { 
@@ -78,7 +80,9 @@ nav ul {
             } 
         }
         /*.............end media.............*/
+    }
 }
+
 
 
 

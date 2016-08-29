@@ -1,0 +1,15 @@
+.offer {
+    height: 800px;
+    position: relative;
+    background-image: url("../images/offer_main.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    
+    .wrapper {
+        height: 100%;
+        @include flex($direction: column, $justify: center);
+    }
+}
