@@ -11,5 +11,13 @@
     .wrapper {
         height: 100%;
         @include flex($direction: column, $justify: center);
+        p {
+            color: #FFF;
+            margin-bottom: 30px;
+        }
+    }
+    .button {
+        color: #FFF;
+        margin-top: 40px;
     }
 }
