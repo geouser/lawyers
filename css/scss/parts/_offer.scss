@@ -1,5 +1,5 @@
 .offer {
-    height: 800px;
+    height: 580px;
     position: relative;
     background-image: url("../images/offer_main.jpg");
     background-repeat: no-repeat;
@@ -21,8 +21,38 @@
     }
 }
 
+.mainPage {
+    .offer {
+        height: 800px;
+        h1 {
+            max-width: 650px;
+            margin-top: 0;
+            &:after {
+                position: static;
+            }
+        }
+    }
+}
 .aboutPage  {
     .offer {
         background-image: url("../images/offer_about.jpg");
+    }
+}
+
+.carrerPage  {
+    .offer {
+        background-image: url("../images/offer_carrer.jpg");
+    }
+}
+
+.specialistsPage {
+    .offer {
+        background-image: url("../images/offer_specialists.jpg");
+    }
+}
+
+.blogPage {
+    .offer {
+        background-image: url("../images/offer_blog.jpg");
     }
 }

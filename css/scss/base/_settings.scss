@@ -34,20 +34,29 @@ h1 {
     font-size: 86px;
     color: #FFF;
     text-transform: uppercase;
-    max-width: 650px;
-}
-.afterLine {
+    font-weight: normal;
+    position: relative;
+    margin-top: -30px;
     &:after {
         display: block;
         content: "";
         margin: 50px auto 0;
         width: 4px; height: 50px;
         background-color: $gold;
+        position: absolute;
+        left: 0; right: 0; margin-left: auto; margin-right: auto;
+    }
+}
+.noUnderLine {
+    &:after {
+       display: none;
     }
 }
 h2 {
     font-size: 58px;
     text-transform: uppercase;
+    color: $main;
+    font-weight: normal;
     &:after {
         display: block;
         content: "";
@@ -59,6 +68,10 @@ h2 {
 h3 {
     font-size: 37px;
     color: $grey;
+    font-family: $sm;
+}
+p {
+    color: #706f6f;
 }
 .white                          {	color: #FFF;}
 

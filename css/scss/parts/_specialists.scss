@@ -1,0 +1,115 @@
+.specialistArtcile {
+    @include flex($alignI : flex-start);   
+    display: none;
+    max-height: 0; 
+    -webkit-transition: max-height .4s;
+       -moz-transition: max-height .4s;
+        -ms-transition: max-height .4s;
+         -o-transition: max-height .4s;
+            transition: max-height .4s;
+    &.shown {
+        display: flex;
+        display: -webkit-flex;
+        max-height: 2000px;
+    }
+    &__img {
+        width: 50%;
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    &__info {
+        width: 50%;
+        padding: 80px 0 0 80px;
+        text-align: left;
+        padding-top: 0;
+        &:before {
+            content: "";
+            display: block;
+            margin-left: -20px;
+            height: 8px;
+            width: 95px;
+            margin-bottom: 30px;
+            background-color: $gold;
+        }
+        color: #706f6f;
+        h2 {
+            margin-bottom: 20px; 
+            font-family: $sm;  
+            font-size: 58px;
+            text-align: left;
+            text-transform: none;
+            &:after {
+                display: none;
+            }
+            color: $grey;
+        }
+        h3 {
+            font-family: $s;
+            font-size: 30px;
+            margin-bottom: 50px; 
+            color: $main;
+            font-weight: normal;
+        }
+        p {
+            line-height: 26px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.specialists__slider {
+    width: calc(100% + 128px);
+    margin-left: -64px;
+    margin-bottom: 135px;
+    &__slide {
+        width: 225px;
+        padding: 0 15px;
+        text-align: left;
+        cursor: pointer;
+        &__img {
+            margin-bottom: 35px;
+            height: 255px;
+            img {
+                width: 100%;
+            }
+        }
+        h3 {
+            font-family: $sm;
+            font-size: 22px;
+            color: $grey;
+            margin-bottom: 18px;
+        }
+        span {
+            font-size: 16px;
+            color: $main;
+        }
+        &__info:after {
+            content: "";
+            display: block;
+            height: 4px;
+            margin-top: 15px;
+            background-color: transparent;
+            @include transition(all, .2s);
+        }
+        &:after {
+            content: "";
+            display: block;
+            margin: 15px 0 0 0;
+            width: 18px; height: 12px;
+            background-image: url("../images/arrow.png");
+            background-repeat: no-repeat;
+            opacity: 0;
+            @include transition(all, .2s);
+        }
+        &:hover {
+            .specialists__slider__slide__info:after {
+                background-color: $gold;
+            }
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}

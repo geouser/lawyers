@@ -84,6 +84,41 @@ jQuery(document).ready(function($) {
         ]
     });
 
+    /*---------------------------
+                                  Specialists
+    ---------------------------*/        
+    $('.specialists__slider').slick({
+        dots: false,
+        arrows: true,
+        lazyLoad: 'ondemand',
+        slidesToShow: 5,
+        slidesToScroll: 1,
+
+        responsive: [
+          {
+            breakpoint: 900,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+
+    $('.specialists__slider__slide').click(function(){
+        var target = $(this).attr('href');
+        $('.specialistArtcile').removeClass('shown');
+        $(target).toggleClass('shown');
+    });
+
+
 
 
     /*----------------------------
