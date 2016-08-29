@@ -1,0 +1,166 @@
+.faq {
+	margin-top: -60px;
+	padding: 60px 0 0;
+	position: relative;
+	z-index: 10;
+	background-color: #fff;
+
+	&:after {
+        display: block;
+        content: "";
+        width: 4px;
+        height: 50px;
+        background-color: $gold;
+        margin: 65px auto;
+        clear: both;
+    }
+}
+
+.faq-box {
+
+	@media (max-width: 1350px) {
+		padding: 0;
+	}
+
+	&__link {
+		cursor: pointer;
+		text-align: left;
+		padding: 24px 120px 25px 80px;
+		position: relative;
+		font-size: 30.48px;
+		font-family: $sm;
+		-webkit-transition: all 0.3s ease;
+			 -o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+
+
+		&.ui-state-active {
+			color: $gold;
+
+			&:hover {
+				background-color: #fff;
+			}
+		}
+
+		&:hover {
+			color: $gold;
+		}
+
+		.caret {
+			background-image: url(../images/arrow-dark.svg);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			width: 20px;
+			height: 12px;
+			position: absolute;
+			top: 50%;
+			margin-top: -4px;
+			right: 38px;
+			opacity: 0.6;
+			-webkit-transition: all 0.3s ease;
+				 -o-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+
+		}
+		&:hover {
+			.caret {
+				opacity: 1;
+			}
+		}
+		&.ui-state-active {
+			.caret {
+				-webkit-transform: rotate(180deg);
+				 	-ms-transform: rotate(180deg);
+					 -o-transform: rotate(180deg);
+						transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__content {
+		margin-bottom: 2px;
+		padding: 0 120px 0 80px;
+		text-align: left;
+		font-size: 18px;
+		line-height: 26.67px;
+		color: #706f6f;
+		background-color: #fff;
+
+
+
+		p {
+			margin-bottom: 14px;
+
+		}
+	}
+}
+
+
+
+/*need help*/
+.need-help {
+	padding-bottom: 190px;
+
+	h2:after {
+		display: none;
+	}
+
+	&__form {
+		width: 640px;
+		display: block;
+		margin: 0 auto;
+		padding: 70px 0 0;
+
+		.form-control {
+			width: 100%;
+			margin-bottom: 60px;
+			position: relative;
+
+			input {
+				width: 100%;
+				text-align: center;
+				height: 60px;
+				border: 0;
+				border-bottom: 4px solid #DADADA;
+				font-family: $s;
+				font-size: 30.48px;
+				padding: 0 25px;
+			}
+
+			&:after {
+				content: '';
+				width: 0;
+				height: 4px;
+				background-color: $gold;
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+				-ms-transform: translateX(-50%);
+				-o-transform: translateX(-50%);
+				transform: translateX(-50%);
+			}
+
+			&:hover,
+			&.focus {
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+
+		.button {
+			margin-top: 60px;
+		}
+	}
+}
+
+.subtitle {
+	font-size: 22px;
+	margin-top: 25px;
+	color: $main;
+}

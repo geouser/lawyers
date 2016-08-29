@@ -143,4 +143,29 @@ jQuery(document).ready(function($) {
         
     });
 
+
+    /*----------------------------
+                                    ACCARDION
+        -------------------------*/
+    if ( $('.faq-box').length > 0 ) {
+        $('.faq-box').accordion({
+            collapsible: true,
+            heightStyle: "content"
+        });    
+    }
+
+    /*---------------------------
+                              CONTACTS FORM
+    ---------------------------*/
+    $('input, textarea').on('focusin', function(event) {
+        event.preventDefault();
+        $(this).parent().addClass('focus');
+    });
+    $('input, textarea').on('focusout', function(event) {
+        event.preventDefault();
+        if ( !$(this).val() ) {
+            $(this).parent().removeClass('focus');
+        }
+    });
+
 }); // end file
