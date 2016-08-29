@@ -1,0 +1,91 @@
+footer {
+	background-color: $gold;
+	padding: 85px 0 115px;
+	color: #fff;
+
+	.wrapper {
+		@include flex($alignI: flex-start, $wrap: wrap)
+	}
+
+	.col {
+		width: 50%;
+
+		&--left {
+			text-align: left;
+			line-height: 22.86px;
+			font-size: 16px;
+			padding-right: 165px;
+		}
+
+		&--right {
+			text-align: right;
+			padding-top: 96px;
+		}
+	}
+
+	.footer__home-link {
+		display: inline-block;
+		width: 65px;
+		margin-bottom: 25px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.row {
+		@include flex($alignI: flex-end, $wrap: wrap, $justify: flex-end)
+	}
+
+	.copyright {
+		font-size: 16px;
+		line-height: 22.86px;
+		padding-left: 240px;
+
+		a {
+			color: #fff;
+		}
+	}
+
+	.socials {
+		a {
+			background-image: url("../images/icons_sprite.png");
+			display: inline-block;
+			vertical-align: middle;
+
+			&:not(:first-child) {
+				margin-left: 20px;
+			}
+		}
+
+		.inst-w { background-position: -5px -44px; width: 17px; height: 16px; } 
+		.tw-w { background-position: -5px -83px; width: 17px; height: 13px; } 
+		.fb-w { background-position: -5px -123px; width: 10px; height: 17px; }
+	}
+}
+
+.footer__nav {
+	display: block;
+	margin: 0;
+	text-align: right;
+	padding-bottom: 165px;
+
+	.menu-item {
+		display: inline-block;
+		vertical-align: middle;
+
+		&:not(:last-child) {
+			margin-right: 32px;
+		}
+
+		a {
+			color: #fff;
+			text-transform: uppercase;
+			font-size: 15px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
