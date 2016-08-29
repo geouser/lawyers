@@ -39,6 +39,22 @@ body {
         .mainNav {
             width: 50%;
         }
+        .mainHeader__info {
+            text-align: right;
+            color: $main;
+            .mail {
+                margin-left: 27px;
+                color: $main;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .tel {
+                margin-left: 30px;
+                color: $main;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
         .logo {
             position: absolute;
             left: 0; right: 0;
@@ -46,6 +62,94 @@ body {
             margin: auto;
         }
 }
+
+.social {
+    display: inline-block;
+    vertical-align: middle;
+    &__item {
+        background-image: url("../images/icons_sprite.png");
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px;
+         filter: gray; /* IE6-9 */
+          filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+          -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+        @include transition(all, .2s);
+        &--fb {
+            background-position: -5px -101px; width: 10px; height: 17px;
+        }
+        &--tw {
+            background-position: -5px -65px; width: 17px; height: 13px;
+        }
+        &--inst {
+            background-position: -5px -23px; width: 17px; height: 16px;
+        }
+        &:hover {
+          filter: none;
+          -webkit-filter: grayscale(0);
+        }
+    }
+}
+
+.searchInput {
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 20px;
+    text-align: left;
+    .wrap {
+        position: relative;
+        height: 100%;
+        width: 105px;
+        margin-right: 30px;
+        @include transition(all, .2s);
+        &:hover,
+        &.focus {
+            width: 140px;
+            margin-right: 5px;
+            border-bottom: 1px solid $grey;
+        }
+    }
+    input {
+        background: none;
+        border: none;
+        color: #main;
+        height: 20px;
+    }
+    input[type="submit"] {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -8px;
+        background-image: url("../images/icons_sprite.png");
+        background-repeat: no-repeat;
+        background-position: -5px -0px; width: 18px; height: 18px;
+        text-indent: -10000px;
+        border: none;
+        z-index: 1;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    input[type="search"] {
+        width: 100%;      
+        height: 100%;
+        z-index: 1;
+        transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+        cursor: text;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+}
+
 
 
 /* ------------------------------------ */

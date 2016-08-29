@@ -19,7 +19,23 @@ $grey : #b6b6b6;
 html, body                    	{   height: 100%;}
 p                             	{   }
 h1, h2, h3, h4, h5, p         	{   }
+
+h1 {
+    font-size: 86px;
+    color: #FFF;
+    text-transform: uppercase;
+    max-width: 650px;
+     &:after {
+        display: block;
+        content: "";
+        margin: 50px auto 0;
+        width: 4px; height: 50px;
+        background-color: $gold;
+    }
+}
 h2 {
+    font-size: 58px;
+    text-transform: uppercase;
     &:after {
         display: block;
         content: "";
@@ -27,6 +43,9 @@ h2 {
         width: 4px; height: 50px;
         background-color: $gold;
     }
+}
+h3 {
+    font-size: 37px;
 }
 .white                          {	color: #FFF;}
 
