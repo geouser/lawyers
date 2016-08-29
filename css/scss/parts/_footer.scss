@@ -48,10 +48,12 @@ footer {
 	}
 
 	.socials {
-		display: inline-block;
-		width: 25px;
-		height: 15px;
-		background-color: #fff;
+		a {
+			background-image: url("../images/icons_sprite.png");
+		}
+		.inst-w { background-position: -5px -44px; width: 17px; height: 16px; } 
+		.tw-w { background-position: -5px -83px; width: 17px; height: 13px; } 
+		.fb-w { background-position: -5px -123px; width: 10px; height: 17px; }
 	}
 }
 
