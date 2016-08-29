@@ -34,8 +34,7 @@ h1 {
     color: #FFF;
     text-transform: uppercase;
     max-width: 650px;
-}
-.afterLine {
+    font-weight: normal;
     &:after {
         display: block;
         content: "";
@@ -44,9 +43,16 @@ h1 {
         background-color: $gold;
     }
 }
+.noUnderLine {
+    &:after {
+       display: none;
+    }
+}
 h2 {
     font-size: 58px;
     text-transform: uppercase;
+    color: $main;
+    font-weight: normal;
     &:after {
         display: block;
         content: "";
@@ -58,6 +64,10 @@ h2 {
 h3 {
     font-size: 37px;
     color: $grey;
+    font-family: $sm;
+}
+p {
+    color: $main;
 }
 .white                          {	color: #FFF;}
 

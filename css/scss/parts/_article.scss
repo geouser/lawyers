@@ -1,0 +1,17 @@
+article {
+    text-align: left;
+    h2 {
+        text-align: center;
+        &:after {
+            margin-bottom: 70px;
+        }
+    }
+    p {
+        margin-bottom: 30px;
+        line-height: 26px;
+    }
+    .button {
+        display: block;
+        margin: 110px auto 0;
+    }
+}
