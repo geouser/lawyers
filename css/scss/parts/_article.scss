@@ -10,8 +10,29 @@
         margin-bottom: 30px;
         line-height: 26px;
     }
+
+    ul {
+        margin-bottom: 30px;
+        li {
+            list-style: none;
+
+            &:before {
+                content: '- ';
+            }
+        }
+    }
     .button {
         display: block;
         margin: 110px auto 0;
     }
+}
+
+.has-decoration-line:after {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: #d7ab69;
+    margin: 65px auto;
+    clear: both;
 }
