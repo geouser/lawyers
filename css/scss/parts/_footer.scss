@@ -50,7 +50,14 @@ footer {
 	.socials {
 		a {
 			background-image: url("../images/icons_sprite.png");
+			display: inline-block;
+			vertical-align: middle;
+
+			&:not(:first-child) {
+				margin-left: 20px;
+			}
 		}
+
 		.inst-w { background-position: -5px -44px; width: 17px; height: 16px; } 
 		.tw-w { background-position: -5px -83px; width: 17px; height: 13px; } 
 		.fb-w { background-position: -5px -123px; width: 10px; height: 17px; }
