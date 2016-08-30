@@ -193,7 +193,7 @@ jQuery(document).ready(function($) {
     }
 
     /*---------------------------
-                              CONTACTS FORM
+                              INPUT ON FOCUS
     ---------------------------*/
     $('input, textarea').on('focusin', function(event) {
         event.preventDefault();
@@ -205,5 +205,55 @@ jQuery(document).ready(function($) {
             $(this).parent().removeClass('focus');
         }
     });
+
+
+
+
+    /*---------------------------
+                              GOOGLE MAPS
+    ---------------------------*/
+    var map;
+    function googleMap_initialize() {
+        var lat = $('#map_canvas').data('lat');
+        var long = $('#map_canvas').data('lng');
+        var mapCenterCoord = new google.maps.LatLng(lat, long);
+        var mapMarkerCoord = new google.maps.LatLng(lat, long);
+
+
+        var mapOptions = {
+            center: mapCenterCoord,
+            zoom: 16,
+            //draggable: false,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        var markerImage = new google.maps.MarkerImage('images/location.png');
+        var marker = new google.maps.Marker({
+            icon: markerImage,
+            position: mapMarkerCoord, 
+            map: map,
+            title:"Law"
+        });
+
+        var styles = [
+          {
+            stylers: [
+              { lightness: -20 },
+              { saturation: -60 }
+            ]
+          }
+        ];
+        map.setOptions({styles: styles});
+        
+        $(window).resize(function (){
+            map.setCenter(mapCenterCoord);
+        });
+    }
+    if ( $('#map_canvas').length > 0) {
+        googleMap_initialize();   
+    }
 
 }); // end file

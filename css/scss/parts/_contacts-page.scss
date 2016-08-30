@@ -1,0 +1,83 @@
+.offer--map {
+	background-image: unset!important;
+}
+.contacts {
+	margin-top: -60px;
+	background-color: #fff;
+	position: relative;
+	padding: 120px 80px 0;
+	@include flex($wrap: wrap,  $alignI: flex-start);
+
+	h2 {
+		font-size: 37px;
+		color: #b6b6b6;
+		text-transform: none;
+		font-family: $sm;
+
+		&:before {
+			content: '';
+			display: block;
+			width: 95px;
+			height: 8px;
+			top: 0;
+			bottom: auto;
+			background-color: $gold;
+			margin-bottom: 25px;
+			margin-left: -15px;
+		}
+		&:after {
+			display: none;
+		}
+	}
+
+	.col {
+		width: 50%;
+		text-align: left;
+	}
+
+	.phone,
+	.email,
+	.location {
+		font-size: 22px;
+		color: #646463;
+
+		a {
+			color: inherit;
+		}
+
+		a,
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			width: -webkit-calc(100% - 60px);
+			width: calc(100% - 60px);
+		}
+
+		i {
+			display: inline-block;
+			vertical-align: middle;
+			width: 35px;
+			height: 35px;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin-right: 15px;
+			line-height: 30px;
+		}
+	}
+
+	.phone i {
+		background-image: url(../images/phone.svg);
+	}
+	.email i {
+		background-image: url(../images/letter.svg);
+	}
+	.location i {
+		background-image: url(../images/pin.svg);
+	}
+
+	.phone,
+	.email {
+		margin-bottom: 30px;
+	}
+}
