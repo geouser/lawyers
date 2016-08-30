@@ -113,6 +113,9 @@ jQuery(document).ready(function($) {
     });
 
     $('.specialists__slider__slide').click(function(){
+        $('.specialists__slider__slide').removeClass('active');
+        $(this).addClass('active');
+        
         var target = $(this).attr('href');
         $('.specialistArtcile').removeClass('shown');
         $(target).toggleClass('shown');

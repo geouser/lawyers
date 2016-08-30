@@ -28,9 +28,28 @@
                     color: $grey;
                     font-size: 22px;
                     margin-bottom: 15px;
+                    position: relative;
+                    padding-right: 12px;
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        right: -6px;
+                        top: 0;
+                        width: 18px;
+                        height: 18px;
+                        background-image: url("../images/arrow.png");
+                        background-repeat: no-repeat;
+                        -webkit-transform: rotate(-93deg);
+                           -moz-transform: rotate(-93deg);
+                            -ms-transform: rotate(-93deg);
+                             -o-transform: rotate(-93deg);
+                                transform: rotate(-93deg);
+                    }
                 }
                 p {
                     font-size: 16px;
+                    color: $main;
                 }
             }
         }
