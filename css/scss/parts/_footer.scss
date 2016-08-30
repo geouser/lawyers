@@ -10,16 +10,32 @@ footer {
 	.col {
 		width: 50%;
 
+		@media ($tablets) {
+			width: 100%;
+		}
+
 		&--left {
 			text-align: left;
 			line-height: 22.86px;
 			font-size: 16px;
 			padding-right: 165px;
+
+			@media (max-width: 1300px) {
+				padding-right: 50px;
+			}
+			@media ($tablets) {
+				text-align: center;
+				padding-right: 0;
+			}
 		}
 
 		&--right {
 			text-align: right;
 			padding-top: 96px;
+
+			@media ($tablets) {
+				text-align: center;
+			}
 		}
 	}
 
@@ -42,12 +58,28 @@ footer {
 		line-height: 22.86px;
 		padding-left: 240px;
 
+		@media (max-width: 1300px) {
+			padding-left: 170px;
+		}
+
+		@media ($tablets) {
+			width: 100%;
+			padding-left: 0;
+		}
+
 		a {
 			color: #fff;
 		}
 	}
 
 	.socials {
+
+		@media ($tablets) {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
 		a {
 			background-image: url("../images/icons_sprite.png");
 			display: inline-block;
@@ -70,12 +102,25 @@ footer {
 	text-align: right;
 	padding-bottom: 165px;
 
+	@media ($tablets) {
+		padding-bottom: 30px;
+		text-align: center;
+	}
+
 	.menu-item {
 		display: inline-block;
 		vertical-align: middle;
 
 		&:not(:last-child) {
 			margin-right: 32px;
+
+			@media (max-width: 1300px) {
+				margin-right: 15px;
+			}
+		}
+
+		@media ($tablets) {
+			margin: 0 7px!important;
 		}
 
 		a {
@@ -95,8 +140,12 @@ footer {
 .partners-bottom {
 	padding: 120px 0;
 
+	@media (max-width: 1300px) {
+		padding: 60px 0;
+	}
+
 	.wrapper {
-		@include flex($alignI: center, $wrap: wrap)
+		@include flex($alignI: center, $wrap: wrap, $justify: center)
 	}
 
 	a {
@@ -104,12 +153,25 @@ footer {
 		vertical-align: middle;
 		width: -webkit-calc(100% / 6);
 		width: calc(100% / 6);
+
+		@media ($tablets) {
+			width: auto;
+			margin-bottom: 15px;
+		}
+
+		img {
+			max-width: 90%;
+		}
 	}
 }
 
 .powered-by {
 	text-align: center;
 	padding-bottom: 100px;
+
+	@media (max-width: 1300px) {
+		padding-bottom: 60px;
+	}
 
 	a {
 		color: $gold;
@@ -133,6 +195,23 @@ footer {
 			padding-left: 80px;
 			padding-right: 20px;
 			margin-bottom: 90px;
+
+			@media ($tablets) {
+				width: 33.33%;
+			}
+
+			@media ($phones) {
+				width: 50%;
+			}
+
+			@media (max-width: 500px) {
+				padding-right: 10px;
+				padding-left: 40px;
+			}
+
+			@media (max-width: 400px) {
+				width: 100%;
+			}
 			
 
 			& > a {
@@ -181,6 +260,11 @@ footer {
 					-ms-transform: translateY(-50%);
 					-o-transform: translateY(-50%);
 					transform: translateY(-50%);
+
+					@media (max-width: 500px) {
+						width: 30px;
+						left: -40px;
+					}
 				}
 			}
 		}

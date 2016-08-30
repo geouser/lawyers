@@ -1,5 +1,9 @@
 .offer--map {
 	background-image: unset!important;
+
+	@media (max-width: 1300px) {
+		height: 300px;
+	}
 }
 .contacts {
 	margin-top: -60px;
@@ -8,11 +12,28 @@
 	padding: 120px 80px 0;
 	@include flex($wrap: wrap,  $alignI: flex-start);
 
+	@media ($tablets) {
+		margin-top: -30px;
+	}
+
+	@media ($phones) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
 	h2 {
 		font-size: 37px;
 		color: #b6b6b6;
 		text-transform: none;
 		font-family: $sm;
+
+		@media ($tablets) {
+			margin-bottom: 40px;
+		}
+
+		@media ($phones) {
+			text-align: center;
+		}
 
 		&:before {
 			content: '';
@@ -24,6 +45,11 @@
 			background-color: $gold;
 			margin-bottom: 25px;
 			margin-left: -15px;
+
+			@media ($phones) {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 		&:after {
 			display: none;
@@ -33,6 +59,10 @@
 	.col {
 		width: 50%;
 		text-align: left;
+
+		@media ($tablets) {
+			width: 100%;
+		}
 	}
 
 	.phone,

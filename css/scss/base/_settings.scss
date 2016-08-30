@@ -16,7 +16,8 @@ $r:         'Roboto';
 
 // RESPONSIVE
 // ---------------------------
-
+$tablets:       'max-width: 1000px';
+$phones:        'max-width: 750px';
 
 
 // TYPOGRAPHIC
@@ -58,6 +59,9 @@ h2 {
     color: $main;
     font-weight: normal;
     font-family: $sm;
+    @media ($phones) {
+        font-size: 40px;
+    }
     &:after {
         display: block;
         content: "";
@@ -78,15 +82,31 @@ h3 {
 // lAYOUT
 // ---------------------------
 
-.wrapper                      	{   width: 1260px;
-								   	margin: 0 auto;
-                                   	text-align: center;
-                              	}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+    text-align: center;
 
-main 							{ 
-                                    margin-top: -60px;
-                                    background-color: #FFF;
-                                    position: relative;
-                                    z-index: 2;
-                                    padding: 64px;
-                                }
+    @media (max-width: 1300px) {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+main { 
+    margin-top: -60px;
+    background-color: #FFF;
+    position: relative;
+    z-index: 2;
+    padding: 64px;
+
+    @media ($tablets) {
+        padding-left: 20px;
+        padding-right: 20px; 
+    }
+    @media ($phones) {
+        padding-left: 0px;
+        padding-right: 0px; 
+    }
+}

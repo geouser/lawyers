@@ -4,6 +4,9 @@
         &__slide {
             display: inline-block;
             text-align: center;
+            a {
+                display: inline-block;
+            }
             img {
                 max-width: 100%;
             }
@@ -25,6 +28,12 @@
                 -ms-transform: rotate(45deg);
                  -o-transform: rotate(45deg);
                     transform: rotate(45deg);
+            @media ($tablets) {
+                left: -30px;
+            }
+            @media ($phones) {
+                left: -10px;
+            }
         }
         &.slick-next {
             right: -75px;
@@ -33,6 +42,12 @@
                 -ms-transform: rotate(-135deg);
                  -o-transform: rotate(-135deg);
                     transform: rotate(-135deg);
+            @media ($tablets) {
+                right: -30px;
+            }
+            @media ($phones) {
+                right: -10px;
+            }
         }
     }
 }
