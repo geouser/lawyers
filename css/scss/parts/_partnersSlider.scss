@@ -15,6 +15,9 @@
         border-top: 4px solid transparent;
         border-right: 4px solid transparent;
         z-index: 10;
+        &:before {
+            display: none;
+        }
         &.slick-prev {
             left: -75px;
             -webkit-transform: rotate(45deg);

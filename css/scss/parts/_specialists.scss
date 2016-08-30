@@ -103,6 +103,7 @@
             opacity: 0;
             @include transition(all, .2s);
         }
+        &.active,
         &:hover {
             .specialists__slider__slide__info:after {
                 background-color: $gold;

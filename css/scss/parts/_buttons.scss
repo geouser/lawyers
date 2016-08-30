@@ -9,6 +9,8 @@
     position: relative;
     background: transparent;
     padding: 0;
+    font: 16px $s;
+    @include transition(all, .3s);
     &:after {
         width: 282px; height: 4px;
         content: "";
@@ -18,5 +20,11 @@
         background-color: $gold;
         left: -6px; right: 0;
         margin: auto;
+        @include transition(all, .3s);
+    }
+    &:hover {
+        &:after {
+            width: 0;
+        }
     }
 }
