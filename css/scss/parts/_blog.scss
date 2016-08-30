@@ -3,9 +3,31 @@
     .blogList {
         @include flex($wrap: wrap);
         text-align: left;
+
+        @media ($phones) {
+            display: block;
+        }
+
+
         &__article {
             width: 465px;
             margin-bottom: 165px;
+            color: inherit;
+
+            @media (max-width: 1300px) {
+                width: 50%;
+                padding: 0 30px;
+            }
+
+            @media ($phones) {
+                width: 280px;
+                padding: 0;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                margin-bottom: 80px;
+            }
+
             h2 {
                 color: $grey;
                 margin-bottom: 20px;
@@ -16,6 +38,16 @@
                 height: 510px;
                 position: relative;
                 margin-bottom: 30px;
+
+                @media (max-width: 1300px) {
+                    height: auto;
+                }
+
+                @media ($phones) {
+                    margin-bottom: 0;
+                }
+
+
                 img {
                     max-width: 100%;
                     min-height: 100%;

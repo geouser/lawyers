@@ -2,15 +2,50 @@
     @include flex($wrap: wrap, $justify: flex-start);
     margin: 70px 0 200px;
     text-align: left;
+
+    @media (max-width: 500px) {
+        display: block;
+    }
+
+
     &__lawyer {
         width: 310px;
         margin: 0 0 86px;
+
+        @media (max-width: 1300px) {
+            width: 33.333%;
+            padding: 0 20px;
+        }
+
+        @media ($phones) {
+            width: 50%;
+        }
+
+        @media (max-width: 500px) {
+            width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         &:nth-of-type(3n + 2) {
             margin: 0 98px 86px;
+
+            @media (max-width: 1300px) {
+                margin: 0 0 86px;
+            }
+
+            @media (max-width: 500px) {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
         h3 {
             color: $grey;
             margin-bottom: 10px;
+
+            @media ($tablets) {
+                font-size: 30px;
+            }
         }
         p {
             font-size: 22px;
@@ -20,6 +55,10 @@
             height: 365px;
             position: relative;
             margin-bottom: 28px;
+
+            @media (max-width: 1300px) {
+                height: auto;
+            }
             img {
                 max-width: 100%;
                 min-height: 100%;
