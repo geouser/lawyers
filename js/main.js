@@ -110,16 +110,30 @@ jQuery(document).ready(function($) {
 
         responsive: [
           {
-            breakpoint: 100,
+            breakpoint: 1000,
             settings: {
-              slidesToShow: 5,
+              slidesToShow: 4,
               slidesToScroll: 1
             }
           },
           {
-            breakpoint: 500,
+            breakpoint: 850,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 650,
             settings: {
               slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 450,
+            settings: {
+              slidesToShow: 1,
               slidesToScroll: 1
             }
           }

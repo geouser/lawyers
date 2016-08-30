@@ -7,13 +7,33 @@
         -ms-transition: max-height .4s;
          -o-transition: max-height .4s;
             transition: max-height .4s;
+
     &.shown {
         display: flex;
         display: -webkit-flex;
         max-height: 2000px;
+
+        @media ($phones) {
+            display: block;
+        }
+    
     }
     &__img {
         width: 50%;
+
+        @media ($tablets) {
+            width: 40%;
+        }
+
+        @media ($phones) {
+            width: 280px;
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
         img {
             max-width: 100%;
             width: 100%;
@@ -24,6 +44,17 @@
         padding: 80px 0 0 80px;
         text-align: left;
         padding-top: 0;
+
+        @media ($tablets) {
+            width: 60%;
+        }
+
+        @media ($phones) {
+            width: 100%;
+            padding-left: 0;
+            float: none;
+        }
+
         &:before {
             content: "";
             display: block;
@@ -32,14 +63,24 @@
             width: 95px;
             margin-bottom: 30px;
             background-color: $gold;
+            color: #706f6f;
+
+            @media ($tablets) {
+                margin-left: 0;
+            }
         }
-        color: #706f6f;
+        
         h2 {
             margin-bottom: 20px; 
             font-family: $sm;  
             font-size: 58px;
             text-align: left;
             text-transform: none;
+
+            @media ($tablets) {
+                font-size: 38px;
+            }
+
             &:after {
                 display: none;
             }
@@ -63,6 +104,20 @@
     width: calc(100% + 128px);
     margin-left: -64px;
     margin-bottom: 135px;
+
+    @media ($tablets) {
+        width: 100%;
+        padding: 0 25px;
+        margin-left: 0;
+
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
+        }
+    }
+
     &__slide {
         width: 225px;
         padding: 0 15px;
@@ -70,7 +125,6 @@
         cursor: pointer;
         &__img {
             margin-bottom: 35px;
-            height: 255px;
             img {
                 width: 100%;
             }
